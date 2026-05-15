@@ -170,7 +170,7 @@ Se utilizó la nueva sintaxis de control flow introducida en Angular 17 como par
 Se reemplazaron estructuras tradicionales *ngIf por @if para mejorar legibilidad.
 
 🔹 Uso de @for
-Para el renderizado de listas se utilizó @for en lugar de *ngFor
+Para el renderizado de listas se utilizó @for en lugar de *ngFor.
 
 ## 👨‍💻 Autor
 
