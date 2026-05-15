@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Booking } from '../../../../core/models/booking.model';
-import { BookingService } from '../../../../core/services/booking.service';
-import { BookingListComponent } from '../../components/booking-list/booking-list.component';
-import { BookingDetailComponent } from '../../components/booking-detail/booking-detail.component';
+import { Booking } from '@core/models/booking.model';
+import { BookingService } from '@core/services/booking.service';
+import { BookingListComponent } from '@features/bookings/components/booking-list/booking-list.component';
+import { BookingDetailComponent } from '@features/bookings/components/booking-detail/booking-detail.component';
 
 @Component({
   selector: 'app-booking-page',

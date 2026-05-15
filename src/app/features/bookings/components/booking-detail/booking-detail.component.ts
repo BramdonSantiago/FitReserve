@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Booking } from '../../../../core/models/booking.model';
+import { Booking } from '@core/models/booking.model';
 
 @Component({
   selector: 'app-booking-detail',
