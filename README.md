@@ -5,6 +5,15 @@ Permite visualizar clases disponibles, ver su detalle y simular una reserva de c
 
 <img src="https://drive.google.com/uc?export=view&id=1LFEi4uIe8NzFBi-vZQ3NK-zssL9WQtaA" style="width: 100%;" />
 
+## 🧰 Stack tecnológico
+
+- Angular 17+ (Standalone Components)
+- TypeScript (strict mode)
+- RxJS
+- SCSS
+- Angular Router con Lazy Loading
+- Dependency Injection moderna con `inject()`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
 ## Development server
