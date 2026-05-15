@@ -1,4 +1,9 @@
-# FitReserve
+# 🏋️ FitReserve
+
+Aplicación Angular para la gestión de reservas de clases en un gimnasio.  
+Permite visualizar clases disponibles, ver su detalle y simular una reserva de cupo.
+
+<img src="https://drive.google.com/uc?export=view&id=1LFEi4uIe8NzFBi-vZQ3NK-zssL9WQtaA" style="width: 100%;" />
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
