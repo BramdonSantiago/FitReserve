@@ -1,0 +1,16 @@
+.header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #353535;
+    background-color: #FFF;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    span {
+        color: #d72835;
+    }
+}

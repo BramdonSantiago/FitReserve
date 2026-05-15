@@ -1,0 +1,24 @@
+@if (loading) {
+    <p>Cargando clases...</p>
+}
+
+@if (error) {
+    <p>Error al cargar clases.</p>
+}
+
+
+@if (!loading && !error) {
+    <div class="layout">
+            <app-booking-list [bookings]="bookings" (bookingSelected)="onSelectBooking($event)">
+            </app-booking-list>
+    
+        @if (selectedBooking) {
+            <app-booking-detail [booking]="selectedBooking" (reserve)="onReserve($event)">>
+            </app-booking-detail>
+        }
+    </div>
+}
+
+<div class="copy">
+    <p>2026. FitReserve todos los derechos reservados.</p>
+</div>

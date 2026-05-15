@@ -1,0 +1,19 @@
+<div class="list-container">
+    <p>Clases disponibles</p>
+    @for (booking of bookings; track booking.id) {
+    <div class="card" (click)="selectBooking(booking)">
+
+        <h3>{{ booking.className }}</h3>
+
+        <p><strong>Instructor:</strong> {{ booking.instructor }}</p>
+
+        <p><strong>Horario:</strong> {{ booking.schedule }}</p>
+
+        <p><strong>Cupos:</strong> {{ booking.availableSpots }}</p>
+    </div>
+    }
+
+    @if (bookings.length === 0) {
+    <p class="empty">No hay clases disponibles</p>
+    }
+</div>

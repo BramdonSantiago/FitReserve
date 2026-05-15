@@ -1,0 +1,25 @@
+<div class="detail-card">
+
+    <h2>Clase: {{ booking.className }}</h2>
+
+    <p><b>Profesor:</b> {{ booking.instructor }}</p>
+
+    <p><b>Horario:</b> {{ booking.schedule }}</p>
+
+    <p>
+        <b>Cupos:</b>
+        {{ booking.availableSpots }} disponibles
+    </p>
+    <p>
+        {{ booking.description }}
+    </p>
+
+    @if (booking.availableSpots === 0) {
+    <p class="full">Sin cupos disponibles</p>
+    }
+
+    <button (click)="onReserve()" [disabled]="booking.availableSpots === 0">
+        Reservar clase
+    </button>
+
+</div>
