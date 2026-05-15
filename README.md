@@ -3,7 +3,9 @@
 Aplicación Angular para la gestión de reservas de clases en un gimnasio.  
 Permite visualizar clases disponibles, ver su detalle y simular una reserva de cupo.
 
+<img src="https://drive.google.com/uc?export=view&id=1T3esGJ-O4VJEgGynvQEOGnpybkSw_kVG" style="width: 100%;" />
 <img src="https://drive.google.com/uc?export=view&id=1LFEi4uIe8NzFBi-vZQ3NK-zssL9WQtaA" style="width: 100%;" />
+<img src="https://drive.google.com/uc?export=view&id=1-mJwDxMldL4hDOcI2IRX19YZdctKbp57" style="width: 100%;" />
 
 ## 🧰 Stack tecnológico
 
