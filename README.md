@@ -154,8 +154,6 @@ import { Booking } from '../../../../core/models/booking.model';
 Después:
 import { Booking } from '@core/models/booking.model';
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
-
 ## 📌 Decisiones técnicas
 Se eligió comunicación con @Input/@Output por simplicidad y claridad
 Se simula backend con RxJS (of + delay)
@@ -165,6 +163,8 @@ Se prioriza claridad sobre sobreingeniería
 ## 👨‍💻 Autor
 
 Desarrollado como prueba técnica Frontend Angular.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
 ## Development server
 
