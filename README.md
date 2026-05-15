@@ -162,6 +162,16 @@ Se simula backend con RxJS (of + delay)
 Se utiliza arquitectura por features para escalabilidad
 Se prioriza claridad sobre sobreingeniería
 
+## ⚡ Angular moderno: Control Flow (@if / @for)
+
+Se utilizó la nueva sintaxis de control flow introducida en Angular 17 como parte de la evolución del framework hacia una sintaxis más simple y eficiente.
+
+🔹 Uso de @if
+Se reemplazaron estructuras tradicionales *ngIf por @if para mejorar legibilidad.
+
+🔹 Uso de @for
+Para el renderizado de listas se utilizó @for en lugar de *ngFor
+
 ## 👨‍💻 Autor
 
 Desarrollado como prueba técnica Frontend Angular.
