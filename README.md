@@ -14,7 +14,7 @@ Permite visualizar clases disponibles, ver su detalle y simular una reserva de c
 - Angular Router con Lazy Loading
 - Dependency Injection moderna con `inject()`
 
-🏗️ Arquitectura del proyecto
+## 🏗️ Arquitectura del proyecto
 
 El proyecto está estructurado bajo un enfoque feature-based architecture, separando responsabilidades por dominio y capa.
 
@@ -41,6 +41,7 @@ src/app/
 └── main.ts
 
 🧠 Responsabilidades por capa
+
 🔹 Core
 
 Contiene lógica global de la aplicación:
@@ -64,7 +65,7 @@ BookingListComponent → listado de clases
 BookingDetailComponent → detalle de clase seleccionada
 BookingPageComponent → container principal que maneja estado
 
-🔄 Arquitectura de componentes
+## 🔄 Arquitectura de componentes
 
 Se utilizó un patrón Container / Presentational Components:
 
@@ -81,7 +82,7 @@ No contiene lógica de negocio
 Muestra información detallada
 Emite evento de reserva
 
-🌐 Consumo de datos
+## 🌐 Consumo de datos
 
 El servicio BookingService simula un endpoint REST:
 
@@ -89,7 +90,7 @@ getBookings(): Observable<Booking[]> {
   return of(MOCK_DATA).pipe(delay(3000));
 }
 
-🚀 Lazy Loading
+## 🚀 Lazy Loading
 
 La aplicación utiliza lazy loading con standalone components:
 
@@ -100,7 +101,7 @@ La aplicación utiliza lazy loading con standalone components:
       .then(m => m.BookingPageComponent)
 }
 
-🧩 Comunicación entre componentes
+## 🧩 Comunicación entre componentes
 
 Se implementó comunicación mediante:
 
@@ -113,7 +114,7 @@ Lista → emite selección de clase
 Page → actualiza estado
 Detail → emite acción de reserva
 
-🎨 UI / UX
+## 🎨 UI / UX
 
 La interfaz está construida con HTML + SCSS puro sin librerías externas.
 
@@ -128,14 +129,14 @@ Loading
 Error
 Empty state
 
-📱 Responsive Design
+## 📱 Responsive Design
 
 La aplicación es responsive con breakpoint en 768px:
 
 Desktop: 2 columnas (lista + detalle)
 Mobile: 1 columna apilada
 
-⚡ Buenas prácticas aplicadas
+## ⚡ Buenas prácticas aplicadas
 Standalone Components (Angular moderno)
 Strict typing con TypeScript
 Separación por responsabilidades
@@ -144,7 +145,7 @@ Uso de inject() en lugar de constructor
 Código sin dependencias de UI libraries
 Observables para manejo de datos asíncronos
 
-🔗 Alias para imports (rutas limpias)
+## 🔗 Alias para imports (rutas limpias)
 
 Se configuraron alias en TypeScript para mejorar la legibilidad del código y evitar rutas relativas complejas (../../../../).
 
@@ -155,13 +156,14 @@ import { Booking } from '@core/models/booking.model';
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
-📌 Decisiones técnicas
+## 📌 Decisiones técnicas
 Se eligió comunicación con @Input/@Output por simplicidad y claridad
 Se simula backend con RxJS (of + delay)
 Se utiliza arquitectura por features para escalabilidad
 Se prioriza claridad sobre sobreingeniería
 
-👨‍💻 Autor
+## 👨‍💻 Autor
+
 Desarrollado como prueba técnica Frontend Angular.
 
 ## Development server
