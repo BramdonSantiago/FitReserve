@@ -14,7 +14,155 @@ Permite visualizar clases disponibles, ver su detalle y simular una reserva de c
 - Angular Router con Lazy Loading
 - Dependency Injection moderna con `inject()`
 
+🏗️ Arquitectura del proyecto
+
+El proyecto está estructurado bajo un enfoque feature-based architecture, separando responsabilidades por dominio y capa.
+
+src/app/
+│
+├── core/
+│   ├── models/
+│   └── services/
+│
+├── shared/
+│   └── components/
+│       └── header/
+│
+├── features/
+│   └── bookings/
+│       ├── components/
+│       │   ├── booking-list/
+│       │   └── booking-detail/
+│       └── pages/
+│           └── booking-page/
+│
+├── app.component.ts
+├── app.routes.ts
+└── main.ts
+
+🧠 Responsabilidades por capa
+🔹 Core
+
+Contiene lógica global de la aplicación:
+
+Modelos (Booking)
+Servicios (BookingService)
+Comunicación con API (mock o HTTP)
+
+🔹 Shared
+
+Componentes reutilizables en toda la aplicación:
+
+Header
+Componentes genéricos sin dependencia de features
+
+🔹 Features (Bookings)
+
+Módulo principal de la aplicación:
+
+BookingListComponent → listado de clases
+BookingDetailComponent → detalle de clase seleccionada
+BookingPageComponent → container principal que maneja estado
+
+🔄 Arquitectura de componentes
+
+Se utilizó un patrón Container / Presentational Components:
+
+🧩 BookingPageComponent (Container)
+Maneja el estado global
+Obtiene datos desde el servicio
+Controla selección de clases
+Maneja loading / error
+🧩 BookingListComponent (Presentational)
+Recibe datos mediante @Input()
+Emite eventos con @Output()
+No contiene lógica de negocio
+🧩 BookingDetailComponent (Presentational)
+Muestra información detallada
+Emite evento de reserva
+
+🌐 Consumo de datos
+
+El servicio BookingService simula un endpoint REST:
+
+getBookings(): Observable<Booking[]> {
+  return of(MOCK_DATA).pipe(delay(3000));
+}
+
+🚀 Lazy Loading
+
+La aplicación utiliza lazy loading con standalone components:
+
+{
+  path: 'bookings',
+  loadComponent: () =>
+    import('./features/bookings/pages/booking-page/booking-page.component')
+      .then(m => m.BookingPageComponent)
+}
+
+🧩 Comunicación entre componentes
+
+Se implementó comunicación mediante:
+
+@Input() → envío de datos al componente hijo
+@Output() → emisión de eventos al componente padre
+
+Ejemplo:
+
+Lista → emite selección de clase
+Page → actualiza estado
+Detail → emite acción de reserva
+
+🎨 UI / UX
+
+La interfaz está construida con HTML + SCSS puro sin librerías externas.
+
+Características:
+
+Layout tipo master-detail
+Grid responsive
+Cards para clases
+Panel de detalle más prominente
+Estados visuales:
+Loading
+Error
+Empty state
+
+📱 Responsive Design
+
+La aplicación es responsive con breakpoint en 768px:
+
+Desktop: 2 columnas (lista + detalle)
+Mobile: 1 columna apilada
+
+⚡ Buenas prácticas aplicadas
+Standalone Components (Angular moderno)
+Strict typing con TypeScript
+Separación por responsabilidades
+Componentes reutilizables
+Uso de inject() en lugar de constructor
+Código sin dependencias de UI libraries
+Observables para manejo de datos asíncronos
+
+🔗 Alias para imports (rutas limpias)
+
+Se configuraron alias en TypeScript para mejorar la legibilidad del código y evitar rutas relativas complejas (../../../../).
+
+Antes:
+import { Booking } from '../../../../core/models/booking.model';
+Después:
+import { Booking } from '@core/models/booking.model';
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+
+📌 Decisiones técnicas
+Se eligió comunicación con @Input/@Output por simplicidad y claridad
+Se simula backend con RxJS (of + delay)
+Se utiliza arquitectura por features para escalabilidad
+Se prioriza claridad sobre sobreingeniería
+
+👨‍💻 Autor
+Desarrollado como prueba técnica Frontend Angular.
 
 ## Development server
 
